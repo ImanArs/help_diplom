@@ -12,7 +12,9 @@ const updateCartModal = () => {
   const cart_html = `
   <div class="modal">
     <div class="header">
-      <button id="close">close</button>
+      <button class="close" id="close">
+        x 
+      </button>
     </div> 
     <div class="content">
       <ul>

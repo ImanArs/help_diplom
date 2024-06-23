@@ -40,7 +40,7 @@ const renderShoes = (data) => {
     const isInCart = cart.some(cartItem => cartItem.id === item.id);
     html += `
       <div class="shoe">
-        <img src="https://via.placeholder.com/150" alt="${item.name}">
+        <img src="${item.image}" alt="${item.name}">
         <h3>${item.name}</h3>
         <p>${item.price} $</p>
         <button onclick="${isInCart ? `removeFromCart(${item.id})` : `addToCart(${item.id})`}">${isInCart ? 'Убрать из корзины' : 'Купить'}</button>
@@ -50,12 +50,16 @@ const renderShoes = (data) => {
   shoes.innerHTML = html;
 };
 
-const removeFromCart = (id) => {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = cart.filter(item => item.id !== id);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  renderShoes(allShoesData);
-  updateCartCount();
+let currentCategory = 'all'; // Шаг 1: Глобальная переменная для хранения текущей категории
+
+const filterShoes = (category) => {
+  currentCategory = category; // Шаг 2: Обновляем текущую категорию при каждом вызове filterShoes
+  if (category === 'all') {
+    renderShoes(allShoesData);
+  } else {
+    const filteredData = allShoesData.filter(item => item.category === category);
+    renderShoes(filteredData);
+  }
 };
 
 const addToCart = (id) => {
@@ -70,17 +74,16 @@ const addToCart = (id) => {
     }
   }
   localStorage.setItem('cart', JSON.stringify(cart));
-  renderShoes(allShoesData)
-  updateCartCount()
+  filterShoes(currentCategory); // Шаг 3: Используем текущую категорию для фильтрации
+  updateCartCount();
 };
 
-const filterShoes = (category) => {
-  if (category === 'all') {
-    renderShoes(allShoesData);
-  } else {
-    const filteredData = allShoesData.filter(item => item.category === category);
-    renderShoes(filteredData);
-  }
+const removeFromCart = (id) => {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart = cart.filter(item => item.id !== id);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  filterShoes(currentCategory); // Шаг 3: Используем текущую категорию для фильтрации
+  updateCartCount();
 };
 
 const getData = async () => {

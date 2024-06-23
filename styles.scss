@@ -44,7 +44,9 @@
       grid-area: girl;
       display: flex;
       align-items: center;
-      
+      img {
+        width: 400px;
+      }
     }
     &:nth-child(2) {
       grid-area: bag;
@@ -70,8 +72,13 @@
   }
 
   .card {
+    // max-width: 300px;
     background: #fff;
     text-align: center;
+    img {
+      width: 175px;
+      height: 200px;
+    }
     .description {
       padding: 20px;
       display: flex;

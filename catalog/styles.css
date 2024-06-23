@@ -1,23 +1,39 @@
 .page {
-  display: grid;
+  display: flex;
+  grid-template-areas: "aside content";
   grid-template-columns: 300px 1fr;
   margin: 60px 0;
   position: relative;
+  justify-content: space-between;
   padding: 20px 50px;
 }
 .page aside {
+  grid-area: aside;
   width: 300px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 21%;
+  left: 50px;
 }
 .page aside button {
   width: 100%;
+  padding: 20px 50px;
+  background: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+.page aside button:hover {
+  color: red;
+  border: 3px solid red;
 }
 .page .shoes {
+  grid-area: content;
+  max-width: 1100px;
+  margin-left: auto;
   margin-top: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
@@ -29,10 +45,31 @@
   flex-direction: column;
   gap: 5px;
   min-height: 400px;
+  transition: all 0.3s ease-in-out;
 }
 .page .shoes .shoe img {
   width: 100%;
+  background: #fff;
+  height: 320px;
+}
+.page .shoes .shoe h3 {
+  line-clamp: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .page .shoes .shoe button {
   width: 100%;
+  padding: 10px 40px;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+.page .shoes .shoe:hover {
+  transform: scaleY(1.1);
+}
+.page .shoes .shoe:hover button {
+  background: #000;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */

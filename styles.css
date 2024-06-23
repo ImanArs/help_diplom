@@ -44,6 +44,9 @@
   display: flex;
   align-items: center;
 }
+.categories .card:nth-child(1) img {
+  width: 400px;
+}
 .categories .card:nth-child(2) {
   grid-area: bag;
 }
@@ -68,6 +71,10 @@
 .best_sellers .card {
   background: #fff;
   text-align: center;
+}
+.best_sellers .card img {
+  width: 175px;
+  height: 200px;
 }
 .best_sellers .card .description {
   padding: 20px;
