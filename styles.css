@@ -9,7 +9,13 @@
 }
 .categories .card {
   background: #fff;
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.categories .card img {
+  margin: 0 auto;
 }
 .categories .card .info {
   width: 100%;
@@ -42,19 +48,30 @@
 .categories .card:nth-child(1) {
   grid-area: girl;
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 .categories .card:nth-child(1) img {
-  width: 400px;
+  width: 300px;
 }
 .categories .card:nth-child(2) {
   grid-area: bag;
 }
+.categories .card:nth-child(2) img {
+  width: 200px;
+}
 .categories .card:nth-child(3) {
   grid-area: cosmetics;
 }
+.categories .card:nth-child(3) img {
+  width: 200px;
+}
 .categories .card:nth-child(4) {
   grid-area: korean-girl;
+  overflow: hidden;
+}
+.categories .card:nth-child(4) img {
+  width: 100%;
 }
 
 .best_sellers {
@@ -122,10 +139,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: relative;
-}
-.instagram .content img::after {
-  content: "+lapsok[doiajdi[asj";
-  font-size: 100px;
+  width: 175px;
 }
 .instagram .content img:hover {
   opacity: 0.7;

@@ -10,7 +10,13 @@
   margin: 0 auto;
   .card {
     background: #fff;
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      margin: 0 auto;
+    }
     .info {
       width: 100%;
       padding: 15px;
@@ -43,19 +49,30 @@
     &:nth-child(1) {
       grid-area: girl;
       display: flex;
+      flex-direction: row;
       align-items: center;
       img {
-        width: 400px;
+        width: 300px;
       }
     }
     &:nth-child(2) {
       grid-area: bag;
+      img {
+        width: 200px;
+      }
     }
     &:nth-child(3) {
       grid-area: cosmetics;
+      img {
+        width: 200px;
+      }
     }
     &:nth-child(4) {
       grid-area: korean-girl;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -124,10 +141,7 @@
       cursor: pointer;
       transition: all .3s ease-in-out;
       position: relative;
-      &::after {
-        content: '+lapsok[doiajdi[asj';
-        font-size: 100px;
-      }
+      width: 175px;
       &:hover {
         opacity: .7;
       }
