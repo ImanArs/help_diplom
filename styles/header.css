@@ -28,6 +28,18 @@ header nav ul li:hover {
 }
 header .user_tools .cart {
   width: 32px;
+  position: relative;
+  cursor: pointer;
+}
+header .user_tools .cart .cart-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  border-radius: 50%;
+  text-align: center;
+  width: 20px;
+  height: 20px;
 }
 header .user_tools .cart img {
   width: 100%;

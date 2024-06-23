@@ -34,6 +34,18 @@ header {
   .user_tools {
     .cart {
       width: 32px;
+      position: relative;
+      cursor: pointer;
+      .cart-counter {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: red;
+        border-radius: 50%;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+      }
       img {
         width: 100%;
       }

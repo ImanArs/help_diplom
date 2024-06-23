@@ -23,7 +23,7 @@ const categories = [
 
 const aside = document.querySelector('#aside');
 const shoes = document.querySelector('#shoes');
-let allShoesData = []; // Для хранения всех данных о обуви
+let allShoesData = [];
 
 const renderAside = () => {
   let html = '';
@@ -54,8 +54,8 @@ const removeFromCart = (id) => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart = cart.filter(item => item.id !== id);
   localStorage.setItem('cart', JSON.stringify(cart));
-  renderShoes(allShoesData); // Перерисовываем обувь, чтобы обновить кнопки
-  updateCartCount(); // Обновляем счетчик товаров в корзине, если функция доступна
+  renderShoes(allShoesData);
+  updateCartCount();
 };
 
 const addToCart = (id) => {
@@ -93,7 +93,6 @@ const getData = async () => {
 renderAside();
 getData();
 
-// Добавляем обработчики событий для кнопок после их рендеринга
 aside.addEventListener('click', (event) => {
   const key = event.target.getAttribute('data-key');
   if (key) {
