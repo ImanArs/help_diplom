@@ -1,0 +1,239 @@
+header {
+  background: #fff;
+  max-width: 1560px;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px #000;
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header .logo {
+  font-size: 24px;
+}
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
+header nav ul li {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: red;
+}
+header .user_tools .cart {
+  width: 32px;
+}
+header .user_tools .cart img {
+  width: 100%;
+}
+
+footer .top {
+  background: #fff;
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: 480px 200px 1fr;
+  gap: 60px;
+}
+footer .top .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .top nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .top .newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .top .newsletter .input {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+}
+footer .top .newsletter .input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+footer .top .newsletter .input button {
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 5px;
+}
+footer .top .newsletter .input button img {
+  width: 24px;
+  transform: rotate(-90deg);
+}
+footer .bottom {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories {
+  display: grid;
+  grid-template-areas: "girl girl korean-girl" "bag cosmetics korean-girl";
+  grid-template-columns: 370px 370px 370px;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.categories .card {
+  background: #fff;
+  text-align: center;
+}
+.categories .card .info {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.categories .card .info p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.categories .card .info h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.categories .card .info button {
+  width: 100%;
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.categories .card .info button:hover {
+  background: #fff;
+  color: #000;
+}
+.categories .card:nth-child(1) {
+  grid-area: girl;
+  display: flex;
+  align-items: center;
+}
+.categories .card:nth-child(2) {
+  grid-area: bag;
+}
+.categories .card:nth-child(3) {
+  grid-area: cosmetics;
+}
+.categories .card:nth-child(4) {
+  grid-area: korean-girl;
+}
+
+.best_sellers {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.best_sellers .title {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.best_sellers .card {
+  background: #fff;
+  text-align: center;
+}
+.best_sellers .card .description {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.best_sellers .card .description h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.best_sellers .card .description p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.best_sellers .card .description button {
+  width: 100%;
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.best_sellers .card .description button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.instagram .title {
+  text-align: center;
+  font-size: 22px;
+}
+.instagram .content {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+}
+.instagram .content img {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.instagram .content img::after {
+  content: "+lapsok[doiajdi[asj";
+  font-size: 100px;
+}
+.instagram .content img:hover {
+  opacity: 0.7;
+}
+
+.swiper {
+  width: 1000px;
+}
+
+.cart_content {
+  position: relative;
+}
+.cart_content .modal {
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 0;
+  width: 300px;
+  z-index: 99;
+}
+.cart_content .modal .header {
+  display: flex;
+  width: 100%;
+}
+.cart_content .modal .header button {
+  margin-left: auto;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

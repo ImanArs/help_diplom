@@ -1,0 +1,258 @@
+header {
+  background: #fff;
+  max-width: 1560px;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px #000;
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .logo {
+    font-size: 24px;
+  }
+  
+  nav {
+    ul {
+      display: flex;
+      gap: 30px;
+
+      li {
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .user_tools {
+    .cart {
+      width: 32px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  .top {
+    background: #fff;
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: 480px 200px 1fr;
+    gap: 60px;
+    .logo {
+      
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .input {
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+
+        input {
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+          border: none;
+          outline: none;
+        }
+        button {
+          background: #fff;
+          color: #000;
+          padding: 5px;
+          border: 1px solid #000;
+          cursor: pointer;
+          transition: all .3s ease-in-out;
+
+          margin: 5px;
+          img {
+            width: 24px;
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.categories {
+  display: grid;
+  grid-template-areas: 
+  "girl girl korean-girl"
+  "bag cosmetics korean-girl";
+  grid-template-columns: 370px 370px 370px;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  .card {
+    background: #fff;
+    text-align: center;
+    .info {
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      p {
+        font-size: 20px;
+        font-weight: 300;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      button {
+        width: 100%;
+        background: #000;
+        border: 1px solid #000;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      
+      }
+    }
+    &:nth-child(1) {
+      grid-area: girl;
+      display: flex;
+      align-items: center;
+      
+    }
+    &:nth-child(2) {
+      grid-area: bag;
+    }
+    &:nth-child(3) {
+      grid-area: cosmetics;
+    }
+    &:nth-child(4) {
+      grid-area: korean-girl;
+    }
+  }
+}
+
+.best_sellers {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .title {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .card {
+    background: #fff;
+    text-align: center;
+    .description {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 300;
+      }
+      button {
+        width: 100%;
+        background: #000;
+        border: 1px solid #000;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+.instagram {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .title {
+    text-align: center;
+    font-size: 22px;
+  }
+  .content {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    img {
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      position: relative;
+      &::after {
+        content: '+lapsok[doiajdi[asj';
+        font-size: 100px;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.swiper {
+  width: 1000px;
+}
+
+.cart_content {
+  position: relative;
+  .modal {
+    border: 1px solid #000;
+    background: #fff;
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 0;
+    width: 300px;
+    z-index: 99;
+    .header {
+      display: flex;
+      width: 100%;
+      button {
+        margin-left: auto;
+        cursor: pointer;
+      }
+    }
+    .content {
+    }
+  }
+}

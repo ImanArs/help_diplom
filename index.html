@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./globals.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h3>E-com</h3>
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Catalog</li>
+        <li>Product</li>
+        <li>Blog</li>
+      </ul>
+    </nav>
+    <div class="user_tools">
+      <div class="cart">
+        <div id="header-cart">
+          <img src="./assets/icons/cart.png" alt="">
+        </div>
+        <div class="cart_content" id="cart_content"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="categories">
+      <div class="card">
+        <img src="./assets/images/girl.png" alt="">
+        <div class="info">
+          <p>Get Extra 50% Off</p>
+          <h3>New Woman Collection</h3>
+          <p>Special Promo</p>
+          <button>Find Collection</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/images/bag.png" alt="">
+        <div class="info">
+          <p>70% Off On</p>
+          <h3>Woman Bags Collection</h3>
+          <button>Shop Now</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/images/cosmetic.png" alt="">
+        <div class="info">
+          <p>70% Off On</p>
+          <h3>Woman Bags Collection</h3>
+          <button>Shop Now</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./assets/images/korean_girl.png" alt="">
+        <div class="info">
+          <p>70% Off On</p>
+          <h3>Woman Bags Collection</h3>
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="best_sellers">
+      <div class="title">
+        <h2>Best Selling Products</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <img src="./assets/images/bag.png" alt="">
+              <div class="description">
+                <h4>Woman Sweet Hoodie</h4>
+                <h3>$250.00</h3>
+                <button>shop now</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img src="./assets/images/bag.png" alt="">
+              <div class="description">
+                <h4>Woman Sweet Hoodie</h4>
+                <h3>$250.00</h3>
+                <button>shop now</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img src="./assets/images/bag.png" alt="">
+              <div class="description">
+                <h4>Woman Sweet Hoodie</h4>
+                <h3>$250.00</h3>
+                <button>shop now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      
+    </section>
+
+    <section class="instagram">
+      <div class="title">
+        <img src="./assets/icons/insta-icon.svg" alt="">
+        <p>Follow us in instagram @graphic_raz</p>
+      </div>
+      <div class="content">
+        <img src="./assets/images/bag.png" alt="">
+        <img src="./assets/images/bag.png" alt="">
+        <img src="./assets/images/bag.png" alt="">
+        <img src="./assets/images/bag.png" alt="">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="top">
+      <div>
+        <div class="logo">
+          <h3>E-com</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <div class="social_media">
+          <img src="./assets/icons/insta-icon.svg" alt="">
+          <img src="./assets/icons/insta-icon.svg" alt="">
+          <img src="./assets/icons/insta-icon.svg" alt="">
+          <img src="./assets/icons/insta-icon.svg" alt="">
+          <img src="./assets/icons/insta-icon.svg" alt="">
+        </div>
+        <a href="">Check our shop in Google Map</a>
+      </div>
+      <nav>
+        <h3>Support Links</h3>
+        <ul>
+          <li>Home</li>
+          <li>Catalog</li>
+          <li>Product</li>
+          <li>Blog</li>
+        </ul>
+      </nav>
+      <div class="newsletter">
+        <h3>Newsletter Signup</h3>
+        <p>There are many variations passages of Lorem Ipsum available</p>
+        <div class="input">
+          <input type="email" placeholder="your email address" name="" id="">
+          <button>
+            <img src="./assets/icons/arrow.png" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="copyright">
+        Copyright @2021 ebRaw. All Rights Reserved By Graphic Raz
+      </div>
+      <div class="cards">
+        VISA
+      </div>
+    </div> 
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      speed: 400,
+      spaceBetween: 100,
+      slidesPerView: 2,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="./header.js"></script>
+</body>
+</html>
