@@ -1,0 +1,52 @@
+footer .top {
+  background: #fff;
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: 480px 200px 1fr;
+  gap: 60px;
+}
+footer .top .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .top nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .top .newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .top .newsletter .input {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+}
+footer .top .newsletter .input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+footer .top .newsletter .input button {
+  background: #fff;
+  color: #000;
+  padding: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 5px;
+}
+footer .top .newsletter .input button img {
+  width: 24px;
+  transform: rotate(-90deg);
+}
+footer .bottom {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=footer.css.map */

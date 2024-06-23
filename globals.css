@@ -8,8 +8,11 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  min-height: 200vh;
   background: #f0f2f5;
+}
+main {
+  min-height: 70vh;
+
 }
 
 section {

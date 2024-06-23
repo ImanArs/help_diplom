@@ -1,0 +1,42 @@
+header {
+  background: #fff;
+  max-width: 1560px;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px #000;
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .logo {
+    font-size: 24px;
+  }
+  
+  nav {
+    ul {
+      display: flex;
+      gap: 30px;
+
+      li {
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .user_tools {
+    .cart {
+      width: 32px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
