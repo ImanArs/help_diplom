@@ -3,13 +3,15 @@
   grid-template-areas: 
   "girl girl korean-girl"
   "bag cosmetics korean-girl";
-  grid-template-columns: 370px 370px 370px;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   .card {
     background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #0002;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -83,13 +85,15 @@
   flex-direction: column;
   gap: 40px;
   .title {
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
   }
 
   .card {
-    // max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #0002;
     background: #fff;
     text-align: center;
     img {
@@ -150,7 +154,8 @@
 }
 
 .swiper {
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .cart_content {
@@ -175,6 +180,65 @@
     }
     .content {
 
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .categories {
+    max-width: 1000px;
+  } 
+  .best_sellers {
+    .card {
+      img {
+        width: 150px;
+        height: 175px;
+      }
+    
+    }
+  }
+  .instagram {
+
+  }
+  .cart_content {
+  }
+}
+@media (max-width: 768px) {
+  .categories {
+    max-width: 670px;
+    grid-template-areas: 
+    "girl girl"
+    "bag cosmetics";
+    grid-template-columns: 1fr 1fr;
+    .card {
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  } 
+  .best_sellers {
+  }
+  .instagram {
+    .content {
+      img {
+        width: 80px;
+      }
+    }
+  }
+  .swiper {
+  } 
+  .cart_content {
+  }
+}
+@media (max-width: 500px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    .card {
+      display: flex;
+      flex-direction: column !important;
+      img {
+        width: 200px !important;
+      }
     }
   }
 }

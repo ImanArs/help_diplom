@@ -1,6 +1,6 @@
 header {
   background: #fff;
-  max-width: 1560px;
+  max-width: 2560px;
   width: 100%;
   padding: 20px 50px;
   display: flex;
@@ -88,6 +88,66 @@ header {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+
+    .logo {
+      // margin-bottom: 20px;
+    }
+
+    nav {
+      ul {
+        gap: 40px;
+      }
+    }
+
+    .user_tools {
+      .cart {
+        width: 34px;
+
+        .cart-counter {
+          width: 15px;
+          height: 15px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 5px 15px;
+
+    .logo {
+      font-size: 20px; // Reduces logo font size for smaller screens
+    }
+
+    nav {
+      ul {
+        gap: 15px;
+        li:nth-child(3) {
+          display: none;
+        }
+        li:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+
+    .user_tools {
+      .cart {
+        width: 30px; 
+
+        .cart-counter {
+          width: 15px;
+          height: 15px;
         }
       }
     }

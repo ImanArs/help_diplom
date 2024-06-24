@@ -3,7 +3,7 @@ footer {
     background: #fff;
     padding: 30px 50px;
     display: grid;
-    grid-template-columns: 480px 200px 1fr;
+    grid-template-columns: .5fr .2fr 1fr;
     gap: 60px;
     .logo {
       
@@ -53,5 +53,16 @@ footer {
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
+  }
+}
+@media screen and (max-width:1200px) {
+  footer {}
+}
+@media screen and (max-width:768px) {
+  footer {
+    .top {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

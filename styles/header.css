@@ -1,6 +1,6 @@
 header {
   background: #fff;
-  max-width: 1560px;
+  max-width: 2560px;
   width: 100%;
   padding: 20px 50px;
   display: flex;
@@ -81,4 +81,45 @@ header .user_tools .cart .cart_content .modal .content button {
 header .user_tools .cart .cart_content .modal .content button:hover {
   background: #000;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  header nav ul {
+    gap: 40px;
+  }
+  header .user_tools .cart {
+    width: 34px;
+  }
+  header .user_tools .cart .cart-counter {
+    width: 15px;
+    height: 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    padding: 5px 15px;
+  }
+  header .logo {
+    font-size: 20px;
+  }
+  header nav ul {
+    gap: 15px;
+  }
+  header nav ul li:nth-child(3) {
+    display: none;
+  }
+  header nav ul li:nth-child(4) {
+    display: none;
+  }
+  header .user_tools .cart {
+    width: 30px;
+  }
+  header .user_tools .cart .cart-counter {
+    width: 15px;
+    height: 15px;
+  }
 }/*# sourceMappingURL=header.css.map */
