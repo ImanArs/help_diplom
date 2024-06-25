@@ -52,11 +52,12 @@ document.querySelector('#formAdd').addEventListener('submit', function(event) {
   // Retrieve the values from the inputs and select
   const name = document.querySelector('.form input[placeholder="name"]').value;
   const price = document.querySelector('.form input[placeholder="price"]').value;
+  const image = document.querySelector('.form input[placeholder="image"]').value;
   const category = document.querySelector('.form select').value;
 
   // Construct the object with the form data
   const formData = {
-    image: 'https://i.ebayimg.com/images/g/lrUAAOSwL2BjbaPv/s-l1200.jpg',
+    image,
     name,
     price,
     category
