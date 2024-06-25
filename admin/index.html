@@ -3,9 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../globals.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="./styles.css">
   <title>Document</title>
 </head>
 <body>
-  
+  <header>
+    <div class="logo">
+      <h3>E-com</h3>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../catalog/index.html">Catalog</a></li>
+        <li><a href="../admin/index.html">admin ?</a></li>
+        <li>Blog</li>
+      </ul>
+    </nav>
+    <div class="user_tools">
+      <div class="cart">
+        <div id="header-cart">
+          <div class="cart-counter" id="cart-counter"></div>
+          <img src="../assets/icons/cart.png" alt="">
+        </div>
+        <div class="cart_content" id="cart_content"></div>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <h1>Admin page</h1>
+    <div class="wrapper">
+      <form class="form" id="formAdd">
+        <input type="text" name="" id="" placeholder="name">
+        <input type="text" name="" id="" placeholder="price">
+        <select name="" id="" aria-placeholder="category">
+          <option value="sport">sport</option>
+          <option value="casual">casual</option>
+          <option value="season">season</option>
+          <option value="business">business</option>
+        </select>
+        <button>создать</button>
+      </form>
+      <section>
+        <h2>shoes of E-com</h2>
+        <div class="shoes" id="shoes">
+          <div class="shoe">
+            <img src="../assets/images/bag.png" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>${item.price} $</p>
+            <button>${isInCart ? 'Убрать из корзины' : 'Купить'}</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="top">
+      <div>
+        <div class="logo">
+          <h3>E-com</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <div class="social_media">
+          <img src="../assets/icons/insta-icon.svg" alt="">
+          <img src="../assets/icons/insta-icon.svg" alt="">
+          <img src="../assets/icons/insta-icon.svg" alt="">
+          <img src="../assets/icons/insta-icon.svg" alt="">
+          <img src="../assets/icons/insta-icon.svg" alt="">
+        </div>
+        <a href="">Check our shop in Google Map</a>
+      </div>
+      <nav>
+        <h3>Support Links</h3>
+        <ul>
+          <li>Home</li>
+          <li>Catalog</li>
+          <li>Product</li>
+          <li>Blog</li>
+        </ul>
+      </nav>
+      <div class="newsletter">
+        <h3>Newsletter Signup</h3>
+        <p>There are many variations passages of Lorem Ipsum available</p>
+        <div class="input">
+          <input type="email" placeholder="your email address" name="" id="">
+          <button>
+            <img src="../assets/icons/arrow.png" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="copyright">
+        Copyright @2021 ebRaw. All Rights Reserved By Graphic Raz
+      </div>
+      <div class="cards">
+        VISA
+      </div>
+    </div> 
+  </footer>
+  <script src="../catalog.js"></script>
+  <script src="../header.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>
