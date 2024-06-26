@@ -2,23 +2,37 @@ footer .top {
   background: #fff;
   padding: 30px 50px;
   display: grid;
-  grid-template-columns: 0.5fr 0.2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
 }
 footer .top .logo {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 footer .top nav {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 footer .top .newsletter {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+footer .top .newsletter .contactInformation {
+  list-style: circle;
+  margin-left: 20px;
+}
+footer .top .newsletter .contactInformation li {
+  font-size: 16px;
+}
+footer .top .newsletter .contactInformation a {
+  text-decoration: underline;
+  font-size: 18px;
 }
 footer .top .newsletter .input {
   border: 1px solid #000;
