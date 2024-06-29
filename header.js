@@ -104,6 +104,7 @@ function openCheckoutModal() {
   // Добавляем обработчик отправки формы
   document.querySelector('#checkoutForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    localStorage.setItem('cart', JSON.stringify([]));
     // Здесь можно добавить обработку заказа
     alert('Заказ подтвержден!');
     closeModal();
