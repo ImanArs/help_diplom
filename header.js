@@ -8,6 +8,8 @@ const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Функция для обновления модального окна корзины
 const updateCartModal = () => {
+  
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
   // Считаем общее количество товаров в корзине
   const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -22,7 +24,7 @@ const updateCartModal = () => {
       </div>
       <div class="content">
         <ul>
-          ${cart.map(item => `<li>${item.name} - ${item.price} $ - ${item.quantity} шт.</li>`).join('')}
+          ${cart.map(item => `<li><p>${item.name} - ${item.price} $ - ${item.quantity} шт.</p> <button id="delete" onclick="deleteShoe(${item.id})">del</button></li>`).join('')}
         </ul>
         <p>Товаров в корзине: ${itemCount}</p>
         <p>Сумма: ${totalSum} $</p>
@@ -45,6 +47,15 @@ function openModal() {
   document.querySelector('#checkout').addEventListener('click', openCheckoutModal);
 }
 
+const deleteShoe = (id) => {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart = cart.filter(item => item.id !== String(id));
+  localStorage.setItem('cart', JSON.stringify(cart));
+  // updateCartModal();
+  updateCartCount();
+  openModal();
+  filterShoes(currentCategory);
+}
 // Функция для закрытия модального окна
 function closeModal() {
   // Очищаем содержимое корзины
@@ -53,6 +64,7 @@ function closeModal() {
 
 // Функция для обновления количества товаров в значке корзины
 const updateCartCount = () => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
   // Считаем общее количество товаров в корзине
   const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
 

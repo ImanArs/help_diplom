@@ -21,7 +21,7 @@
   top: 100px;
   left: 0px;
 }
-.page form input {
+.page form input, .page form select {
   width: 100%;
   padding: 10px 30px;
   background: #fff;

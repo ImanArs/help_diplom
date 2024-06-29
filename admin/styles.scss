@@ -21,7 +21,7 @@
     position: sticky; // Changed from fixed to sticky
     top: 100px; // Adjusted to ensure it works perfectly. This value may need tweaking based on your header size or specific needs.
     left: 0px;
-    input {
+    input, select {
       width: 100%;
       padding: 10px 30px;
       background: #fff;

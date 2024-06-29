@@ -71,6 +71,12 @@ header .user_tools .cart .cart_content .modal .content ul {
   padding: 10px 0;
   border-bottom: 1px solid #898989;
 }
+header .user_tools .cart .cart_content .modal .content ul li {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  gap: 10px;
+}
 header .user_tools .cart .cart_content .modal .content button {
   padding: 10px 0;
   background: #fff;
