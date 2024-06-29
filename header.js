@@ -105,8 +105,10 @@ function openCheckoutModal() {
   document.querySelector('#checkoutForm').addEventListener('submit', function(event) {
     event.preventDefault();
     localStorage.setItem('cart', JSON.stringify([]));
+    updateCartCount()
     // Здесь можно добавить обработку заказа
     alert('Заказ подтвержден!');
     closeModal();
+    filterShoes(currentCategory);
   });
 }
