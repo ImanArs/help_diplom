@@ -20,10 +20,10 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="../catalog/index.html">Catalog</a></li>
         <li><a href="../admin/index.html">admin ?</a></li>
-        <li>Blog</li>
+        <li></li>
       </ul>
     </nav>
-    <div class="user_tools">
+    <!-- <div class="user_tools">
       <div class="cart">
         <div id="header-cart">
           <div class="cart-counter" id="cart-counter"></div>
@@ -31,34 +31,31 @@
         </div>
         <div class="cart_content" id="cart_content"></div>
       </div>
-    </div>
+    </div> -->
   </header>
   <main class="page">
-    <h1>Admin page</h1>
-    <div class="wrapper">
-      <form class="form" id="formAdd">
-        <input type="text" name="" id="" placeholder="name">
-        <input type="text" name="" id="" placeholder="price">
-        <input type="text" name="" id="" placeholder="image">
-        <select name="" id="" aria-placeholder="category">
-          <option value="sport">sport</option>
-          <option value="casual">casual</option>
-          <option value="season">season</option>
-          <option value="business">business</option>
-        </select>
-        <button>создать</button>
-      </form>
-      <section>
-        <h2>shoes of Shoes-Bish</h2>
-        <div class="shoes" id="shoes">
-          <div class="shoe">
-            <img src="../assets/images/bag.png" alt="${item.name}">
-            <h3>${item.name}</h3>
-            <p>${item.price} $</p>
-            <button>${isInCart ? 'Убрать из корзины' : 'Купить'}</button>
-          </div>
-        </div>
-      </section>
+    <div id="formToLogin"></div>
+    <div id="adminContent">
+      <h1>Admin page</h1>
+      <div class="wrapper">
+        <form class="form" id="formAdd">
+          <input type="text" name="" id="" placeholder="name">
+          <input type="text" name="" id="" placeholder="price">
+          <input type="text" name="" id="" placeholder="image">
+          <select name="" id="" aria-placeholder="category">
+            <option value="sport">sport</option>
+            <option value="casual">casual</option>
+            <option value="season">season</option>
+            <option value="business">business</option>
+          </select>
+          <button>добавить</button>
+        </form>
+        <section>
+          <h2>shoes of Shoes-Bish</h2>
+          <div class="shoes" id="shoes"></div>
+        </section>
+      </div>
+      <div id="modalWrapper"></div>
     </div>
   </main>
   <footer>
@@ -82,8 +79,8 @@
         <ul>
           <li>Home</li>
           <li>Catalog</li>
-          <li>Product</li>
-          <li>Blog</li>
+          <li></li>
+          <li></li>
         </ul>
       </nav>
       <div class="newsletter">
@@ -108,8 +105,7 @@
       </div>
     </div> 
   </footer>
-  <script src="../catalog.js"></script>
-  <script src="../header.js"></script>
+  <!-- <script src="../header.js"></script> -->
   <script src="./index.js"></script>
 </body>
 </html>

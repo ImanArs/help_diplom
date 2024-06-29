@@ -21,7 +21,7 @@
   top: 100px;
   left: 0px;
 }
-.page form * {
+.page form input {
   width: 100%;
   padding: 10px 30px;
   background: #fff;
@@ -138,4 +138,76 @@
   .page .shoes .shoe img {
     height: 220px;
   }
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-content .close:hover, .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content #formUpdate {
+  display: flex;
+  flex-direction: column;
+}
+.modal-content #formUpdate input,
+.modal-content #formUpdate select,
+.modal-content #formUpdate button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.modal-content #formUpdate button {
+  width: 100%;
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.modal-content #formUpdate button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.form {
+  max-width: 500px;
+  width: 100%;
+  margin: 150px auto;
+}
+.form h1 {
+  text-align: center;
+}
+.form form {
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */

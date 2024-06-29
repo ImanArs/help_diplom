@@ -21,7 +21,7 @@
     position: sticky; // Changed from fixed to sticky
     top: 100px; // Adjusted to ensure it works perfectly. This value may need tweaking based on your header size or specific needs.
     left: 0px;
-    * {
+    input {
       width: 100%;
       padding: 10px 30px;
       background: #fff;
@@ -147,5 +147,85 @@
         }
       }
     }
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; // Фиксированное позиционирование для модального окна
+  z-index: 1000; // Высокий z-index для отображения поверх других элементов
+  left: 0;
+  top: 0;
+  width: 100%; // Полная ширина
+  height: 100%; // Полная высота
+  overflow: auto; // Скроллинг для содержимого, если оно превышает высоту окна
+  background-color: rgba(0, 0, 0, 0.5); // Полупрозрачный черный фон
+
+  &-content {
+    background-color: #fefefe; // Белый фон
+    margin: 5% auto; // Центрирование содержимого по вертикали
+    padding: 20px; // Внутренний отступ
+    border: 1px solid #888; // Серая граница
+    width: 80%; // Ширина содержимого
+    max-width: 500px; // Максимальная ширина содержимого
+    border-radius: 10px; // Скругленные углы
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); // Тень для придания глубины
+
+    .close {
+      color: #aaa; // Серый цвет текста
+      float: right; // Выровнять вправо
+      font-size: 28px; // Увеличенный размер текста
+      font-weight: bold; // Жирный текст
+
+      &:hover,
+      &:focus {
+        color: #000; // Черный цвет текста
+        text-decoration: none; // Убрать подчеркивание
+        cursor: pointer; // Курсор указателя
+      }
+    }
+
+    #formUpdate {
+      display: flex; // Гибкая раскладка
+      flex-direction: column; // Вертикальное выравнивание элементов
+
+      input,
+      select,
+      button {
+        margin-bottom: 10px; // Отступ снизу
+        padding: 10px; // Внутренний отступ
+        border: 1px solid #ccc; // Серая граница
+        border-radius: 5px; // Скругленные углы
+        font-size: 16px; // Размер текста
+      }
+
+      button {
+        width: 100%;
+        background: #000;
+        border: 1px solid #000;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  max-width: 500px;
+  width: 100%;
+  margin: 150px auto;
+  h1 {
+    text-align: center;
+  }
+  form {
+    margin: 0 auto;
   }
 }

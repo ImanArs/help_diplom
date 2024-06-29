@@ -31,3 +31,39 @@ input, button, textarea {
 ul,ol {
   list-style: none;
 }
+
+
+form {
+  grid-area: aside;
+  height: 150%;
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: sticky;
+  top: 100px;
+  left: 0px;
+}
+form input {
+  width: 100%;
+  padding: 10px 30px;
+  background: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 3px solid rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2666666667);
+  border-radius: 15px;
+}
+form button {
+  width: 100%;
+  padding: 10px 30px;
+  background: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 3px solid rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2666666667);
+  border-radius: 15px;
+}
